@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5c3d2e" />
+    <title>Loja Aroma | Café Aroma</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script_produtos.js"></script>
+  </head>
+  <body class="pagina-loja">
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="Café Aroma, página inicial">
+          <img src="../img/logo.png" alt="" />
+          <h2>Café Aroma</h2>
+        </a>
+      </div>
+      <nav aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="produtos.html" aria-current="page">Loja</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <button class="loja-sacola" id="abrir-sacola" type="button" aria-expanded="false" aria-controls="dialog-sacola" aria-label="Abrir sacola, 0 itens">
+        <span aria-hidden="true">Sacola</span>
+        <span id="contador-sacola">0</span>
+      </button>
+    </header>
+
+    <dialog class="loja-dialog-sacola" id="dialog-sacola" aria-labelledby="titulo-sacola">
+      <div class="loja-sacola-painel">
+        <div class="loja-sacola-cabecalho">
+          <h2 id="titulo-sacola">Minha sacola</h2>
+          <button class="loja-fechar-sacola" id="fechar-sacola" type="button">Fechar</button>
+        </div>
+        <div class="loja-conteudo-sacola" id="itens-sacola" aria-live="polite">
+          <p class="loja-sacola-vazia">Sua sacola está vazia.</p>
+        </div>
+        <div class="loja-resumo-sacola">
+          <span>Total</span>
+          <strong id="total-sacola">R$ 0,00</strong>
+        </div>
+      </div>
+    </dialog>
+
+    <main>
+      <section class="banner loja-hero">
+        <div class="texto-banner">
+          <p class="eyebrow">Loja Aroma</p>
+          <h1>Seu ritual de café, em casa.</h1>
+          <p>Bebidas clássicas, receitas especiais e sobremesas para acompanhar boas pausas.</p>
+          <a class="btn-cardapio" href="#catalogo">Conheça nossos produtos</a>
+        </div>
+        <img src="../img/banner.jpg" alt="Café servido em uma mesa da cafeteria" />
+      </section>
+
+      <section class="loja-catalogo" id="catalogo" aria-labelledby="titulo-catalogo">
+        <div class="loja-cabecalho-catalogo">
+          <div>
+            <p class="loja-sobretitulo">Selecionados para você</p>
+            <h2 id="titulo-catalogo">Loja Aroma</h2>
+          </div>
+          <label class="loja-busca">
+            <span>Buscar produtos</span>
+            <input id="busca-produtos" type="search" placeholder="Café, caneca, presente..." />
+          </label>
+        </div>
+
+        <div class="loja-filtros" id="filtros-produtos" aria-label="Filtrar por categoria">
+          <button type="button" class="loja-filtro ativo" data-categoria="Todos" aria-pressed="true">Todos</button>
+          <button type="button" class="loja-filtro" data-categoria="Cafés" aria-pressed="false">Cafés</button>
+          <button type="button" class="loja-filtro" data-categoria="Especiais" aria-pressed="false">Especiais</button>
+          <button type="button" class="loja-filtro" data-categoria="Gelados" aria-pressed="false">Gelados</button>
+          <button type="button" class="loja-filtro" data-categoria="Sobremesas" aria-pressed="false">Sobremesas</button>
+          <p id="resumo-produtos" class="loja-resumo" aria-live="polite">Carregando produtos...</p>
+        </div>
+
+        <section class="loja-grid" id="lista-produtos" aria-label="Produtos disponíveis">
+          <p class="loja-status">Carregando a loja...</p>
+        </section>
+      </section>
+    </main>
+
+    <footer id="contato">
+      <div class="footer-content">
+        <h3>Café Aroma</h3>
+        <p>Um bom café merece bons acompanhamentos.</p>
+        <p>© 2026 Café Aroma</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+:root {
+    --marrom-escuro: #5c3d2e;
+    --marrom-medio: #8b5e3c;
+    --bege-quente: #ffd699;
+    --bege-claro: #f0e6dd;
+    --off-white: #f8f5f2;
+    --branco: #ffffff;
+    --cinza-escuro: #333333;
+    --cinza-claro: #e6e6e6;
+    --preto-suave: #1a1a1a;
+    --sombra: rgba(0, 0, 0, 0.2);
+}
